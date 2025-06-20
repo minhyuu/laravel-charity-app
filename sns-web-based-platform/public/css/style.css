@@ -1,0 +1,683 @@
+html {
+    scroll-behavior: smooth;
+}
+
+h1,
+.h1,
+.h2,
+.h3,
+.h4,
+.h5,
+.h6,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    color: #14342d;
+    font-family: "Cabin Condensed", sans-serif;
+    font-weight: 700;
+}
+
+body,
+p {
+    font-family: "Gowun Dodum", sans-serif;
+    font-weight: 400;
+}
+
+a {
+    color: #6dc9af;
+    text-decoration: none;
+}
+
+a:hover {
+    color: #14342d;
+}
+
+.btn-danger {
+    font-family: "Cabin Condensed", sans-serif;
+    font-weight: 700;
+}
+
+.btn-primary {
+    background-color: #14342d;
+    font-family: "Cabin Condensed", sans-serif;
+    color: #fff;
+    border: 1px solid #14342d;
+    transition: .3s ease;
+    font-weight: 700;
+}
+
+.btn-primary:hover,
+.btn-primary:focus,
+.btn-primary:active {
+    background-color: #6dc9af !important;
+    color: #14342d !important;
+    border: 1px solid #6dc9af;
+    box-shadow: none !important;
+}
+
+.btn-primary:active {
+    border-color: #14342d !important;
+}
+
+.btn-secondary {
+    background-color: #6dc9af;
+    font-family: "Cabin Condensed", sans-serif;
+    color: #14342d;
+    border: 1px solid #6dc9af;
+    transition: .3s ease;
+    font-weight: 700;
+}
+
+.btn-secondary:hover,
+.btn-secondary:focus,
+.btn-secondary:active {
+    background-color: #14342d !important;
+    color: #6dc9af !important;
+    border: 1px solid #14342d;
+    box-shadow: none !important;
+}
+
+.btn-secondary:active {
+    border-color: #6dc9af !important;
+}
+
+/* Header and Index page css starts here */
+
+header {
+    background-color: #14342d;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    position: sticky;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 2;
+}
+
+header .btn-secondary:hover {
+    border: 1px solid #6dc9af;
+}
+
+header .navbar-collapse {
+    justify-content: flex-end;
+}
+
+header .navbar {
+    padding: 1rem 0;
+}
+
+.navbar-brand img,
+.charity-logo img {
+    max-width: 133px;
+}
+
+.login.active {
+    text-decoration: none !important;
+}
+
+a.nav-link {
+    color: #fff !important;
+    font-family: "Cabin Condensed", sans-serif;
+    transition: .3s ease;
+}
+
+.navbar .nav-link.active {
+    color: #fff !important;
+    text-decoration: underline;
+}
+
+header .navbar-toggler {
+    padding: 0;
+    border: 0;
+    outline: 0;
+}
+
+.home-banner {
+    padding: 3rem 0;
+    min-height: 400px;
+    position: relative;
+    background-image: url("../images/banner.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    z-index: 1;
+}
+
+.introduction h1 {
+    color: #6dc9af;
+}
+
+.banner {
+    color: #fff;
+    padding: 2.5rem 0;
+    position: relative;
+    z-index: 1;
+    min-height: 250px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: url("../images/banner.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.banner h1 {
+    color: #fff;
+}
+
+.home-banner:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: -1;
+}
+
+.banner:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.3);
+    z-index: -1;
+}
+
+.home-banner .introduction {
+    margin: 0 auto;
+    max-width: 690px;
+}
+
+.home-about {
+    padding: 3.5rem 0;
+}
+
+.charity-list-page,
+.logged-in,
+.login,
+.register,
+.dashboard,
+.user-manage,
+.create-page,
+.edit-project-page,
+.manage-page,
+.master-page,
+.donate-page,
+.registered-user,
+.password-reset,
+.confirm-password {
+    padding: 2rem 0;
+}
+
+.charity-list h2 {
+    margin-bottom: 1rem;
+}
+
+.charity-list a {
+    display: block;
+    text-decoration: none;
+}
+
+.charity-list a:hover h4 {
+    color: #0056b3;
+}
+
+.charity-item {
+    transition: .3s ease;
+}
+
+.charity-item:hover {
+    transform: scale(1.1);
+}
+
+.charity-list h5 {
+    margin-bottom: 0;
+    padding: 0.8rem;
+    border: 1px solid #f3f3f3;
+    border-top: 0;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.charity-category {
+    padding-bottom: 3rem;
+}
+
+.user-manage .search-bar input {
+    height: auto;
+    border-right: 0;
+}
+
+.user-manage .search-bar .btn-secondary {
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+}
+
+.search {
+    margin: 0 -0.5rem;
+}
+
+.search-bar,
+.selection-users {
+    padding: 0 0.5rem;
+}
+
+.selection-users select {
+    padding: 0.4rem;
+}
+
+.selection-users select,
+.selection-users .row {
+    height: 100%;
+}
+
+.user-manage table {
+    display: table;
+}
+
+.user-manage #charity-list {
+    margin-top: 2rem;
+}
+
+#charity_list_table {
+    overflow-y: hidden;
+}
+
+/* Registration page css starts from here */
+
+.registration-form {
+    padding: 3rem 0;
+}
+
+.registration-form form {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.registration-form input.form-control {
+    height: 50px;
+}
+
+.registration-form button,
+.login-form button {
+    display: block;
+    margin-top: 2rem !important;
+    margin: 0 auto;
+    max-width: 200px;
+    padding: 0.8rem;
+    width: 100%;
+}
+
+.login-form label {
+    font-weight: 700;
+}
+
+.login-form button {
+    margin-top: 1.5rem !important;
+}
+
+form label,
+form select {
+    font-size: 16px;
+}
+
+.donate-form select {
+    height: 38px;
+    padding: 0.5rem;
+    border-color: #d0d0d0;
+    border-radius: 5px;
+}
+
+.registered-user .nav-tabs {
+    border: 0;
+    margin: 0 -0.4rem;
+}
+
+.registered-user .nav-link {
+    background-color: #6dc9af !important;
+    font-family: "Cabin Condensed", sans-serif;
+    color: #14342d !important;
+    border: 1px solid #6dc9af !important;
+    transition: .3s ease;
+    font-weight: 700;
+    border-radius: 5px;
+}
+
+.registered-user .nav-link:hover {
+    background-color: #14342d !important;
+    color: #6dc9af !important;
+    border: 1px solid #14342d !important;
+}
+
+.registered-user .tab-pane {
+    padding-top: 1rem;
+}
+
+/* Footer css starts from here */
+
+footer {
+    padding: 3rem 0 2.3rem;
+    color: #fff;
+    background-color: #14342d;
+}
+
+footer h4 {
+    color: #6dc9af
+}
+
+footer ul {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+
+footer ul li {
+    line-height: 1.5;
+    margin-bottom: 0.7rem;
+}
+
+footer ul a {
+    color: #fff;
+    text-decoration: none;
+}
+
+footer ul a:hover {
+    color: #6dc9af;
+    text-decoration: underline;
+}
+
+footer .copyright {
+    margin-top: 1.5rem;
+}
+
+footer .copyright p {
+    margin-bottom: 0;
+}
+
+.copyright a:hover {
+    color: #6dc9af;
+    text-decoration: underline;
+}
+
+.modal-backdrop {
+    z-index: 0 !important;
+}
+
+/*Manage Css starts from here*/
+.master-page .table {
+    font-size: 16px !important;
+}
+
+.master-page .table .btn-primary,
+.master-page .table .btn-danger {
+    font-size: 14px !important;
+    padding: 0.25rem 1.15rem;
+}
+
+.master-page .table a {
+    color: #1d5243 !important;
+    text-decoration: none;
+}
+
+.master-page .table a:hover {
+    color: #052f23 !important;
+    text-decoration: underline;
+}
+
+.master-page .table .emphasized-text {
+    font-weight: bold !important;
+}
+
+.master-page .search-filter select,
+.user-manage .search-filter select {
+    height: 100%;
+    width: 100%;
+    padding: 0.7rem;
+    border: 1px solid #d0d0d0;
+    border-radius: 5px;
+}
+
+.master-page .search-filter input,
+.user-manage .search-filter input {
+    height: 100%;
+}
+
+.master-page .filter .btn,
+.user-manage .filter .btn,
+.charity-list-page .filter-btn .btn {
+    font-family: "Cabin Condensed", sans-serif;
+    font-weight: 700;
+}
+
+.master-page .action-btn .btn {
+    width: 100%;
+}
+
+.master-page .action-btn .btn-primary {
+    margin: 0.2rem 0;
+}
+
+.master-page table th,
+.master-page table td {
+    vertical-align: middle;
+}
+
+#charity-list table th,
+#charity-list table td {
+    vertical-align: middle;
+}
+
+.edit-project-page .save-changes,
+.create-page .save-changes {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+}
+
+.edit-project-page .save-changes .btn-primary,
+.create-page .save-changes .btn-primary {
+    margin-right: 0.5rem;
+}
+
+.charity-list-page .filter {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 -0.5rem;
+}
+
+.charity-list-page .filter-options {
+    max-width: 70%;
+    flex-basis: 70%;
+    padding: 0 0.5rem;
+}
+
+.charity-list-page .search-filter input {
+    height: 100%;
+}
+
+.charity-list-page .filter-options select {
+    width: 100%;
+    height: 100%;
+    border: 1px solid #d0d0d0;
+    border-radius: 5px;
+    padding: 0.5rem;
+}
+
+.charity-list-page .filter-btn {
+    max-width: 30%;
+    flex-basis: 30%;
+    padding: 0 0.5rem;
+}
+
+.charity-table,
+#charity-list,
+#donation_history_table {
+    font-size: 16px !important;
+}
+
+.charity-table table .btn,
+#charity-list table .btn {
+    font-size: 14px;
+}
+
+#charity-list .modal select {
+    padding: 0.5rem;
+}
+
+.label-value-pair {
+    display: grid;
+    grid-template-columns: 150px auto;
+    gap: 5rem;
+    margin-bottom: 0.5rem;
+}
+
+.label-value-pair strong {
+    text-align: left;
+}
+
+.label-value-pair span {
+    text-align: left;
+}
+
+.project-table tr td:nth-child(1) {
+    text-align: left;
+}
+
+/*Responsive Css starts from here */
+
+@media(min-width:768px) {
+
+    .charity-list-page,
+    .logged-in,
+    .login,
+    .register,
+    .dashboard,
+    .user-manage,
+    .create-page,
+    .edit-project-page,
+    .manage-page,
+    .master-page,
+    .donate-page,
+    .registered-user,
+    .password-reset,
+    .confirm-password {
+        padding: 3rem 0;
+    }
+}
+
+@media(min-width:992px) {
+    .master-page form select {
+        height: 100%;
+    }
+}
+
+@media(min-width:1200px) {
+
+    body,
+    p {
+        font-size: 18px;
+    }
+
+    a.nav-link {
+        font-size: 1.1rem;
+        letter-spacing: 1px;
+    }
+
+    .navbar .nav-link:hover {
+        transform: translateY(-7px);
+        text-decoration: underline;
+    }
+
+    .navbar-nav {
+        margin: 0 -0.4rem;
+    }
+
+    li.nav-item {
+        padding: 0 0.4rem;
+    }
+
+    .btn {
+        padding: 0.5rem 2rem;
+        font-size: 1.1rem;
+    }
+
+    .login-form input.form-control {
+        height: 50px;
+    }
+}
+
+@media(max-width: 1199px) {
+    .home-banner {
+        padding: 2rem 0;
+        min-height: auto;
+    }
+
+    .home-about {
+        padding: 2.5rem 0 2rem;
+    }
+
+    .charity-category {
+        padding-bottom: 2.5rem;
+    }
+
+    .registration-form {
+        padding: 2rem 0;
+    }
+
+    footer {
+        padding: 2.3rem 0;
+    }
+}
+
+@media(max-width:991px) {
+    .navbar-light .navbar-toggler-icon {
+        filter: invert(1);
+    }
+
+    .banner {
+        padding: 1.5rem 0;
+        min-height: 200px;
+    }
+
+    .registration-form button {
+        margin-top: 1.5rem !important;
+    }
+}
+
+@media(max-width: 767px) {
+    header .navbar {
+        padding: 0.8rem 0;
+    }
+
+    .home-about {
+        padding: 1.5rem 0 1rem;
+    }
+
+    .charity-category {
+        padding-bottom: 1rem;
+    }
+
+    .user-manage table {
+        display: block;
+    }
+
+    .search {
+        margin: 0 -0.5rem;
+    }
+
+    .search-bar,
+    .selection-users {
+        padding: 0 0.5rem;
+    }
+
+    footer {
+        padding: 2rem 0;
+    }
+
+    footer .copyright {
+        margin-top: 0;
+    }
+}
