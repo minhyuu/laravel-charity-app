@@ -34,7 +34,7 @@ RUN composer install --no-dev --optimize-autoloader
 # RUN chown -R www-data:www-data /var/www && chmod -R 755 /var/www
 RUN chown -R www-data:www-data storage bootstrap/cache database && \
     chmod -R 775 storage bootstrap/cache && \
-    chmod 664 database/database.sqlite
+    chmod 664 database/charity.db
 
 # Generate application key
 RUN php artisan key:generate
@@ -45,7 +45,7 @@ ENV APP_ENV=local \
     APP_DEBUG=true \
     APP_URL=http://localhost:8080 \
     DB_CONNECTION=sqlite \
-    DB_DATABASE=/var/www/database/database.sqlite   
+    DB_DATABASE=/var/www/database/charity.db
 
 # Expose HTTP port for Render
 EXPOSE 8080
