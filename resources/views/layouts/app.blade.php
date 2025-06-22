@@ -36,6 +36,9 @@
     <link href="{{ secure_asset('css/style.css') }}" rel="stylesheet">
     <link href="{{ secure_asset('css/charity_list.css') }}" rel="stylesheet">
 
+    <!-- <link href="{{ asset('css/style.css') }}" rel="stylesheet">
+    <link href="{{ asset('css/charity_list.css') }}" rel="stylesheet"> -->
+
     <!-- Scripts -->
 	<script src="{{ secure_asset('js/project_administrator.js') }}" defer></script>
 
