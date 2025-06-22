@@ -26,10 +26,26 @@ COPY --from=composer:2 /usr/bin/composer /usr/bin/composer
 COPY . .
 
 # Install PHP dependencies
-RUN composer install
+# RUN composer install
+RUN composer install --no-dev --optimize-autoloader
+
 
 # Set permissions (only for local dev)
-RUN chown -R www-data:www-data /var/www && chmod -R 755 /var/www
+# RUN chown -R www-data:www-data /var/www && chmod -R 755 /var/www
+RUN chown -R www-data:www-data storage bootstrap/cache database && \
+    chmod -R 775 storage bootstrap/cache && \
+    chmod 664 database/database.sqlite
+
+# Generate application key
+RUN php artisan key:generate
+RUN php artisan config:cache
+
+# Set environment variables
+ENV APP_ENV=local \
+    APP_DEBUG=true \
+    APP_URL=http://localhost:8080 \
+    DB_CONNECTION=sqlite \
+    DB_DATABASE=/var/www/database/database.sqlite   
 
 # Expose HTTP port for Render
 EXPOSE 8080
