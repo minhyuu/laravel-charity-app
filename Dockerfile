@@ -39,9 +39,9 @@ RUN chown -R www-data:www-data storage bootstrap/cache database && \
 # Generate application key
 # COPY .env.example .env
 # Ensure the .env file is writable
-RUN chmod 664 .env
-RUN php artisan key:generate
-RUN php artisan config:cache
+# RUN chmod 664 .env
+# RUN php artisan key:generate
+# RUN php artisan config:cache
 
 # Set environment variables
 ENV APP_ENV=local \
