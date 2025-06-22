@@ -33,11 +33,11 @@
 	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
 
     <!-- Styles -->
-    <link href="{{ asset('css/style.css') }}" rel="stylesheet">
-    <link href="{{ asset('css/charity_list.css') }}" rel="stylesheet">
+    <link href="{{ secure_asset('css/style.css') }}" rel="stylesheet">
+    <link href="{{ secure_asset('css/charity_list.css') }}" rel="stylesheet">
 
     <!-- Scripts -->
-	<script src="{{ asset('js/project_administrator.js') }}" defer></script>
+	<script src="{{ secure_asset('js/project_administrator.js') }}" defer></script>
 
     <title>SS Charity</title>
 
