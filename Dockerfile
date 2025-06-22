@@ -31,7 +31,8 @@ RUN composer install
 # Set permissions (only for local dev)
 RUN chown -R www-data:www-data /var/www && chmod -R 755 /var/www
 
-# Expose port
-EXPOSE 9000
+# Expose HTTP port for Render
+EXPOSE 8080
 
-CMD ["php-fpm"]
+# Run Laravel's built-in dev server
+CMD ["php", "artisan", "serve", "--host=0.0.0.0", "--port=8080"]
