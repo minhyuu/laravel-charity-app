@@ -37,8 +37,9 @@ RUN chown -R www-data:www-data storage bootstrap/cache database && \
     chmod 664 database/charity.db
 
 # Generate application key
-RUN php artisan key:generate
-RUN php artisan config:cache
+
+# RUN php artisan key:generate
+# RUN php artisan config:cache
 
 # Set environment variables
 ENV APP_ENV=local \
