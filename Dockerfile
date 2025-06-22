@@ -37,9 +37,11 @@ RUN chown -R www-data:www-data storage bootstrap/cache database && \
     chmod 664 database/charity.db
 
 # Generate application key
-
-# RUN php artisan key:generate
-# RUN php artisan config:cache
+COPY .env.example .env
+# Ensure the .env file is writable
+RUN chmod 664 .env
+RUN php artisan key:generate
+RUN php artisan config:cache
 
 # Set environment variables
 ENV APP_ENV=local \
@@ -47,6 +49,8 @@ ENV APP_ENV=local \
     APP_URL=http://localhost:8080 \
     DB_CONNECTION=sqlite \
     DB_DATABASE=/var/www/database/charity.db
+
+
 
 # Expose HTTP port for Render
 EXPOSE 8080
