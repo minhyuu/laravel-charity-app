@@ -48,7 +48,7 @@ ENV APP_ENV=local \
     APP_DEBUG=true \
     APP_URL=http://localhost:8080 \
     DB_CONNECTION=sqlite \
-    DB_DATABASE=/var/www/database/charity.db
+    DB_DATABASE=charity.db
 
 
 
