@@ -19,7 +19,7 @@
                     <div class="card-body">
 
                         <!-- Registration form -->
-                        <form method="POST" action="{{ route('register') }}">
+                        <form method="POST" action="{{ secure_url('/register') }}">
                             @csrf
 
                             <!-- Input Name -->

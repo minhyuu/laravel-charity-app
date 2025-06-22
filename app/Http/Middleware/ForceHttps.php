@@ -16,6 +16,12 @@ class ForceHttps
      */
     public function handle(Request $request, Closure $next)
     {
+        
+        // Redirect to HTTPS if the request is not secure and the environment is production
+        if (!$request->secure() && app()->environment('production')) {
+            return redirect()->secure($request->getRequestUri());
+        }
+        
         return $next($request);
     }
 }

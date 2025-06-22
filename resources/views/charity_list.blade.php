@@ -16,7 +16,7 @@
 
         <!-- Search Function -->
         <div class="search-filter">
-            <form action="{{ route('charity_list') }}" method="GET" class="row g-3">
+            <form action="{{ secure_url('/charity_list') }}" method="GET" class="row g-3">
                 <!-- Search bar -->
                 <div class="col-lg-6 col-12">
                     <input type="text" name="search" class="form-control" id="search" placeholder="Search for project.."
