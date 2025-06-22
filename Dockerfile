@@ -56,8 +56,6 @@ ENV APP_ENV=production \
     DB_CONNECTION=sqlite \
     DB_DATABASE=charity.db
 
-RUN php artisan config:cache
-RUN php artisan route:cache
 
 # Expose HTTP port for Render
 EXPOSE 8080
