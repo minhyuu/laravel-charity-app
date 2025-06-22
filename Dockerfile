@@ -46,7 +46,7 @@ RUN chown -R www-data:www-data storage bootstrap/cache database && \
 # Set environment variables
 ENV APP_ENV=local \
     APP_DEBUG=true \
-    APP_URL=http://localhost:8080 \
+    # APP_URL=http://localhost:8080 \
     DB_CONNECTION=sqlite \
     DB_DATABASE=charity.db
 
