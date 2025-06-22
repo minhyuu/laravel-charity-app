@@ -1,0 +1,30 @@
+# Thư mục cần loại trừ khỏi build
+node_modules/
+vendor/
+
+# Các file cấu hình và nhạy cảm không nên đưa vào image (nếu bạn không muốn copy .env)
+# Nếu bạn cần .env trong container, hãy **bỏ comment dòng dưới**
+# .env
+
+# IDE/editor files
+.DS_Store
+.idea/
+.vscode/
+
+# Logs
+*.log
+npm-debug.log*
+yarn-error.log*
+
+# Laravel specific
+/public/storage
+/storage/*.key
+
+# Git
+.git
+.gitignore
+
+# Tests & artifacts (nếu không cần chạy test trong image)
+phpunit.xml
+phpunit.xml.dist
+tests/
