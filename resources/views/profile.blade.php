@@ -24,7 +24,7 @@
 
                     <!-- Card body -->
                     <div class="card-body">
-                        <form action="{{ route('profile_update') }}" method="POST">
+                        <form action="{{ secure_url('/profile_update') }}" method="POST">
                             @csrf
                             @method('PUT')
 
@@ -86,7 +86,7 @@
                             </div>
                         @endif
 
-                        <form method="POST" action="{{ route('password_update') }}">
+                        <form method="POST" action="{{ secure_url('/password_update') }}">
                             @csrf
 
                             <div class="row mb-3">

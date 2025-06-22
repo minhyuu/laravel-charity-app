@@ -16,7 +16,7 @@
 
         <!-- Filter -->
         <div class="search-filter">
-            <form action="{{ route('user_management') }}" method="GET" class="row g-3">
+            <form action="{{ secure_url('/user_management') }}" method="GET" class="row g-3">
                 <!-- Search bar for name -->
                 <div class="col-lg-4 col-12">
                     <input type="text" name="search" class="form-control" id="search" placeholder="Search for name.."
@@ -105,7 +105,7 @@
 
                                     <!-- Modal body -->
                                     <div class="modal-body">
-                                        <form action="{{ url('update_role/'.$user->id) }}" method="POST">
+                                        <form action="{{ secure_url('update_role/'.$user->id) }}" method="POST">
                                             @csrf
                                             @method('PUT')
 
