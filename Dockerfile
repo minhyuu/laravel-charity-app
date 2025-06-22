@@ -44,13 +44,20 @@ RUN chown -R www-data:www-data storage bootstrap/cache database && \
 # RUN php artisan config:cache
 
 # Set environment variables
-ENV APP_ENV=local \
-    APP_DEBUG=true \
-    # APP_URL=http://localhost:8080 \
+# ENV APP_ENV=local \
+#     APP_DEBUG=true \
+#     # APP_URL=http://localhost:8080 \
+#     DB_CONNECTION=sqlite \
+#     DB_DATABASE=charity.db
+
+ENV APP_ENV=production \
+    APP_DEBUG=false \
+    APP_URL=https://smilenshare.onrender.com \
     DB_CONNECTION=sqlite \
     DB_DATABASE=charity.db
 
-
+RUN php artisan config:cache
+RUN php artisan route:cache
 
 # Expose HTTP port for Render
 EXPOSE 8080
