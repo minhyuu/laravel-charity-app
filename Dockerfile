@@ -37,7 +37,7 @@ RUN chown -R www-data:www-data storage bootstrap/cache database && \
     chmod 664 database/charity.db
 
 # Generate application key
-COPY .env.example .env
+# COPY .env.example .env
 # Ensure the .env file is writable
 RUN chmod 664 .env
 RUN php artisan key:generate
