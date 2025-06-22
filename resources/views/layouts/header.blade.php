@@ -3,7 +3,7 @@
 
         <!-- Logo -->
         <a class="navbar-brand" href="{{ route('main') }}">
-            <img src="{{ url('../images/logo.png') }}" alt="Logo" class="img-fluid"></a>
+            <img src="{{ secure_url('../images/logo.png') }}" alt="Logo" class="img-fluid"></a>
         
         <!-- Responsive toggler -->
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
@@ -71,13 +71,13 @@
                         @endif
 
                         <!-- Logout button for login user -->
-                        <a class="dropdown-item" href="{{ route('logout') }}"
+                        <a class="dropdown-item" href="{{ secure_url('/logout') }}"
                             onclick="event.preventDefault();
                                             document.getElementById('logout-form').submit();">
                             {{ __('Logout') }}
                         </a>
 
-                        <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
+                        <form id="logout-form" action="{{ secure_url('/logout') }}" method="POST" class="d-none">
                             @csrf
                         </form>
 
