@@ -35,7 +35,7 @@
 
         <!-- Search Function -->
         <div class="search-filter">
-            <form action="{{ route('manage') }}" method="GET" class="row g-3">
+            <form action="{{ secure_url('/manage') }}" method="GET" class="row g-3">
                 <div class="col-lg-4 col-12">
                     <input type="text" name="search" class="form-control" id="search" placeholder="Search for project.."
                         title="Type in a name" value="{{ request('search') }}">

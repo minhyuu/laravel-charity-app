@@ -12,7 +12,7 @@
 <div class="edit-project-page">
     <div class="container">
         <h5>Update Project</h5>
-        <form action="{{ route('update', $project->id) }}" method="POST" enctype="multipart/form-data">
+        <form action="{{ secure_url('/update', $project->id) }}" method="POST" enctype="multipart/form-data">
             @csrf
             @method('PUT')
             <div class="mb-4">
@@ -76,7 +76,7 @@
             </div>
             <div class="save-changes">
                 <button type="submit" class="btn btn-primary">Save changes</button>
-                <a href="{{ route('manage') }}" class="btn btn-secondary">Cancel</a>
+                <a href="{{ secure_url('/manage') }}" class="btn btn-secondary">Cancel</a>
             </div>
         </form>
     </div>

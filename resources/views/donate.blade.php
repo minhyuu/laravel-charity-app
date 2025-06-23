@@ -51,7 +51,7 @@
                     <!-- Card body -->
                     <div class="card-body">
                         <!-- Forms go here -->
-                        <form action="{{ route('create_donate', $project->id) }}" method="POST">
+                        <form action="{{ secure_url('/create_donate', $project->id) }}" method="POST">
                             @csrf
 
                             <!-- Card Holder's Name -->
