@@ -86,7 +86,7 @@
                         </td>
                         <td>
                             <button type="button" class="btn btn-primary col-auto"
-                                onclick="window.location='{{ route('donate', $project->id) }}'">
+                                onclick="window.location='{{ secure_url('/donate', $project->id) }}'">
                                 Donate
                             </button>
                         </td>

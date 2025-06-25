@@ -121,11 +121,11 @@
                                 <!-- Edit button -->
                                 @if ($project->status == 'ongoing')
                                 <button type="button" class="btn btn-primary col-auto"
-                                    onclick="window.location='{{ route('edit', $project->id) }}'">Edit</button>
+                                    onclick="window.location='{{ secure_url('/edit', $project->id) }}'">Edit</button>
                                 @endif
 
                                 <!-- Delete button -->
-                                <form action="{{ route('deleteAndReset', $project->id) }}" method="POST">
+                                <form action="{{ secure_url('/deleteAndReset', $project->id) }}" method="POST">
                                     @csrf
                                     @method('DELETE')
                                     @if ($project->status == 'ongoing' &&
@@ -270,13 +270,13 @@
                     </div>
                 </div>
                 <div class="modal-footer">
-                    <form action="{{ route('deleteAndReset', $project->id) }}" method="POST">
+                    <form action="{{ secure_url('/deleteAndReset', $project->id) }}" method="POST">
                         @csrf
                         @method('DELETE')
                         <button type="submit" class="btn btn-danger">Delete</button>
                     </form>
                     <button type="button" class="btn btn-secondary" data-dismiss="modal"
-                        onclick="window.location.href='{{ route('manage') }}'">Close</button>
+                        onclick="window.location.href='{{ secure_url('/manage') }}'">Close</button>
                 </div>
             </div>
         </div>

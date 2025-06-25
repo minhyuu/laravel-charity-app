@@ -15,10 +15,10 @@
             <div class="quick-links">
                 <h4>Quick Links</h4>
                 <ul>
-                    <li><a href="{{ route('main') }}">Home</a></li>
-                    <li><a href="{{ route('charity_list') }}">Charity List</a></li>
-                    <li><a href="{{ route('login') }}">Login</a></li>
-                    <li><a href="{{ route('register') }}">Registration</a></li>
+                    <li><a href="{{ secure_url('/main') }}">Home</a></li>
+                    <li><a href="{{ secure_url('/charity_list') }}">Charity List</a></li>
+                    <li><a href="{{ secure_url('/login') }}">Login</a></li>
+                    <li><a href="{{ secure_url('/register') }}">Registration</a></li>
                 </ul>
             </div>
             <!-- /.quick-links -->

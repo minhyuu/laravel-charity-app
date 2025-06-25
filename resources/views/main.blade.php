@@ -87,7 +87,7 @@
             <div class="row justify-content-center">
                 <div class="col-lg-4 col-md-6 col-sm-12 mb-3 mb-lg-2">
                     <div class="charity-item text-center">
-                        <a href="{{ route('charity_list') }}">
+                        <a href="{{ secure_url('/charity_list') }}">
                             <img src="{{ url('../images/category-health.jpg') }}" alt="Health" class="img-fluid">
                             <h5>Health</h5>
                         </a>
@@ -97,7 +97,7 @@
 
                 <div class="col-lg-4 col-md-6 col-sm-12 mb-3 mb-lg-2">
                     <div class="charity-item text-center">
-                        <a href="{{ route('charity_list') }}">
+                        <a href="{{ secure_url('/charity_list') }}">
                             <img src="{{ url('../images/category-education.jpg') }}" alt="Education" class="img-fluid">
                             <h5>Education</h5>
                         </a>
@@ -107,7 +107,7 @@
 
                 <div class="col-lg-4 col-md-6 col-sm-12 mb-3 mb-lg-2">
                     <div class="charity-item text-center">
-                        <a href="{{ route('charity_list') }}">
+                        <a href="{{ secure_url('/charity_list') }}">
                             <img src="{{ url('../images/category-environment.jpg') }}" alt="Environment"
                                 class="img-fluid">
                             <h5>Environment</h5>

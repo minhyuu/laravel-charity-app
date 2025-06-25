@@ -45,29 +45,29 @@
                     <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">   
                         <!-- Display profile page for user login -->
                         @if (isset(Auth::user()->id))
-                            <a class="dropdown-item" href="{{ route('profile') }}">Profile</a>
+                            <a class="dropdown-item" href="{{ secure_url('/profile') }}">Profile</a>
                         @endif
 
                         <!-- If user is system manager, display user management page link -->
                         @if (isset(Auth::user()->id) && Auth::user()->role == "Manager")
-                            <a class="dropdown-item" href="{{ route('manage') }}">Project Management</a>
-                            <a class="dropdown-item" href="{{ route('user_management') }}">User Management</a>
+                            <a class="dropdown-item" href="{{ secure_url('/manage') }}">Project Management</a>
+                            <a class="dropdown-item" href="{{ secure_url('/user_management') }}">User Management</a>
                         @endif
                     
                     	<!-- If user is donator, display registered user page link -->
                         @if (isset(Auth::user()->id) && Auth::user()->role == "Donator")
-                            <a class="dropdown-item" href="{{ route('registered_user') }}">Dashboard</a>
+                            <a class="dropdown-item" href="{{ secure_url('/registered_user') }}">Dashboard</a>
                         @endif
                     
                     	<!-- If user is project administrator, display project administrator page link -->
                         @if (isset(Auth::user()->id) && Auth::user()->role == "Administrator")
-                            <a class="dropdown-item" href="{{ route('manage') }}">Project Management</a>
-                            <a class="dropdown-item" href="{{ route('project_administrator') }}">Dashboard</a>
+                            <a class="dropdown-item" href="{{ secure_url('/manage') }}">Project Management</a>
+                            <a class="dropdown-item" href="{{ secure_url('/project_administrator') }}">Dashboard</a>
                         @endif
 
                         <!-- Display dashboard page for System Manager -->
                         @if (isset(Auth::user()->id) && Auth::user()->role == "Manager")
-                        <a class="dropdown-item" href="{{ route('dashboard_manager') }}">Dashboard</a>
+                        <a class="dropdown-item" href="{{ secure_url('/dashboard_manager') }}">Dashboard</a>
                         @endif
 
                         <!-- Logout button for login user -->

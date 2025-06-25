@@ -25,7 +25,7 @@
         </div>
         @endif
 
-        <form action="{{ route('store') }}" method="POST" enctype="multipart/form-data">
+        <form action="{{ secure_url('/store') }}" method="POST" enctype="multipart/form-data">
             @csrf
             <div class="mb-4">
                 <label for="projectTitle" class="form-label" style="font-weight: bold;">Title</label>
@@ -71,7 +71,7 @@
             </div>
             <div class="save-changes">
                 <button type="submit" class="btn btn-primary">Save</button>
-                <a href="{{ route('manage') }}" class="btn btn-secondary">Cancel</a>
+                <a href="{{ secure_url('/manage') }}" class="btn btn-secondary">Cancel</a>
             </div>
             <!--/.save-changes -->
         </form>
