@@ -15,7 +15,7 @@
                         </div>
                         @endif
 
-                        <form method="POST" action="{{ route('password.email') }}">
+                        <form method="POST" action="{{ secure_url('/password/email') }}">
                             @csrf
 
                             <div class="row mb-3">
